@@ -1,0 +1,292 @@
+.clear
+{
+	clear: both;
+}
+
+.element
+	{
+		float: left;
+		width: 400px;
+		height: 400px;
+		//background-color: #333;
+		color: #fff;
+		position: relative;
+		border:20px solid transparent;
+	}
+
+	.front , .back
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		backface-visibility:hidden;
+		transition:all 0.5s ease;
+	}
+
+	.front
+	{
+		transform:rotateY(0deg);
+	}
+
+	.back
+	{
+		transform:rotateY(180deg);
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+	}
+
+	.element:hover .front
+	{
+		transform:rotateY(180deg);
+	}
+
+	.element:hover .back
+	{
+		transform:rotate(0deg);
+	}
+
+	.element .front img
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+	/** effect2 **/
+
+	.front1 , .back1
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		backface-visibility:hidden;
+		transition:all 0.5s ease;
+	}
+
+	.front1
+	{
+		transform:rotateX(0deg);
+	}
+
+	.back1
+	{
+		transform:rotateY(180deg);
+		background-color: #1abc9c;
+		color: #fff;
+		text-align: center;
+	}
+
+	.element:hover .front1
+	{
+		transform:rotateX(180deg);
+	}
+
+	.element:hover .back1
+	{
+		transform:rotate(0deg);
+	}
+
+	.element .front1 img
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+/** effect3 styles **/
+
+.front2 , .back2
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		backface-visibility:hidden;
+		transition:all 0.5s ease;
+	}
+
+	.front2 img
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+	.back2
+	{
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		top: -100%;
+		transition:all 0.5s ease;
+	}
+
+	.effect3
+	{
+		overflow: hidden;
+		transition:all 0.5s ease;
+	}
+
+	.effect3:hover .back2
+	{
+		top: 0;
+	}
+
+	.effect3:hover
+	{
+		transform:scale(0.7);
+		border-radius: 50%;
+		border:20px solid orange;
+	}
+
+	.effect3:hover .back-content
+	{
+		transform:scale(1.5);
+		padding-top: 10%;
+	}
+
+
+/*** effect4 styles ***/
+
+.front4 , .back4
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		transition:all 0.5s ease;
+	}
+
+	.front4
+	{
+		z-index: 2;
+		transform-origin:left;
+	}
+
+	.front4 img
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+	.back4
+	{
+		background-color: #27ae60;
+		color: #fff;
+		text-align: center;
+		transition:all 0.5s ease;
+		z-index: 1;
+	}
+
+	.effect4
+	{
+		overflow: hidden;
+		transition:all 0.5s ease;
+	}
+
+	.effect4:hover .front4
+	{
+		transform:rotateY(90deg);
+	}
+
+
+	/*** effect5 ***/
+
+	.front5 , .back5
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition:all 0.5s ease-in-out;
+	}
+
+	.front5 img
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+	.back5
+	{
+		background-color:#9b59b6;
+		color: #fff;
+		text-align: center;
+		transform:rotateX(-90deg);
+		transform-origin:top;
+	}
+
+	.effect5:hover .back5
+	{
+		transform:rotateX(0);
+	}
+
+
+	/** effect6 styles **/
+
+
+.front6 , .back6
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition:all 0.5s ease-in-out;
+	}
+
+	.front6 img
+	{
+		width: 100%;
+		height: 100%;
+		transition:all 0.5s ease-in-out;
+	}
+
+	.back6
+	{
+		background-color:rgba(44, 62, 80,0.8);
+		color: #fff;
+		text-align: center;
+		transform:scale(0);
+	}
+
+	.front6:before
+	{
+		position: absolute;
+		content: '';
+		width: 220%;
+		height: 70%;
+		background-color:rgba(44, 62, 80,0.8);
+		top: -40%;
+		right:-140%;
+		transform:rotate(40deg);
+		transition:all 0.5s ease;
+		z-index: 2;
+	}
+
+	.effect6
+	{
+		overflow: hidden;
+	}
+
+	.effect6:hover .front6:before
+	{
+		top:120%;
+		right: 120%;
+	}
+
+	.effect6:hover .back6
+	{
+		transform:scale(1);
+	}
+
+	.effect6:hover .front6 img
+	{
+		transform:scale(1.3)rotate(10deg);
+	}
